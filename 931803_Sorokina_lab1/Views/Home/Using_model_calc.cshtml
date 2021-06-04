@@ -1,0 +1,33 @@
+﻿
+@model Sorokina_lab1.Models.Calc
+
+@{
+    ViewBag.Title = "PassUsingCalc - Backend1";
+}
+
+
+<h2>@Model.title</h2>
+
+<b>
+    <p> Rand Value First : @Model.a </p>
+    <p>Rand Value Second : @Model.b</p>
+
+    <p>Add:</p>
+</b>
+<p>@Model.a + @Model.b = @Model.add</p>
+
+<b><p>Sub:</p></b>
+<p>@Model.a - @Model.b = @Model.sub</p>
+
+<b><p>Mult</p></b>
+<p>@Model.a * @Model.b = @Model.mult</p>
+
+<b><p>Div:</p></b>
+@if (Model.b != 0)
+{
+    <p>@Model.a / @Model.b = @Model.div</p>}
+
+else
+{ <p>Impossible!</p>}
+
+

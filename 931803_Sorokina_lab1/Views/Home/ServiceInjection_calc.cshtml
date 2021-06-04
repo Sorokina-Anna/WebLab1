@@ -1,0 +1,43 @@
+﻿
+
+@inject Sorokina_lab1.Services.Service1 calc
+
+
+@{
+    ViewBag.Title = "AccessServiceDirectly - Backend1";
+}
+
+@{ 
+    calc.Service();
+}
+
+
+
+
+<h2>@calc.titlle</h2>
+
+<b>
+    <p> Rand Value First : @calc.a </p>
+    <p>Rand Value Second : @calc.b</p>
+
+    <p>Add:</p>
+</b>
+<p>@calc.a + @calc.b = @calc.add</p>
+
+<b><p>Sub:</p></b>
+<p>@calc.a - @calc.b = @calc.sub</p>
+
+<b><p>Mult</p></b>
+<p>@calc.a * @calc.b = @calc.mult</p>
+
+<b><p>Div:</p></b>
+@if (calc.b != 0)
+{
+    <p>@calc.a / @calc.b = @calc.div</p>}
+
+else
+{ <p>Impossible!</p>}
+
+
+
+
